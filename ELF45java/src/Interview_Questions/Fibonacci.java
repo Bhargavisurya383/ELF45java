@@ -1,20 +1,23 @@
 package Interview_Questions;
 
+import java.util.Scanner;
+
 public class Fibonacci {
 	public static void main(String[] args) {
-		int fib1=1;
-		int fib2=2;
-		System.out.println(fib1);
-		System.out.println(fib2);
-		for(int i=2;i<=8;i++)
-		{
-			int fib3=fib1+fib2;
-			System.out.println(fib1);
-			System.out.println(fib3);
-					fib1=fib2;
-					fib2=fib3;
-					
-					
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n=sc.nextInt();
+		int a=0;
+		int b=1;
+		System.out.print(a+" ");
+		System.out.print(b+" ");
+		int c=0;
+		while(n-2>0) {
+			c=a+b;
+			System.out.print(c+" ");
+			a=b;
+			b=c;
+			n--;
 		}
 	}
 
